@@ -1,15 +1,15 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 interface Props {
-  children: string;
+  children: ReactNode;
   color?: "primary" | "secondary" | "danger";
-  value: boolean;
+  isDisabled: boolean;
   onClick: () => void;
 }
 const Button = ({
   children,
   color = "primary",
-  value = true,
+  isDisabled: value = true,
   onClick,
 }: Props) => {
   return (
