@@ -1,11 +1,13 @@
+import { useState } from "react";
 import Button from "./components/Button";
 import ListGroup from "./components/ListGroup";
 
 function App() {
   let items = ["New York", "San Fransisco", "Tokyo", "London", "Paris"];
-
+  let [selectedItem, setSelectedItem] = useState(false);
   const handleSelectedItem = (item: string) => {
     console.log(item);
+    setSelectedItem(true);
   };
 
   return (
@@ -15,7 +17,15 @@ function App() {
         heading={"Cities"}
         onSelectItem={handleSelectedItem}
       />
-      <Button />
+      <Button
+        color={selectedItem ? "primary" : "secondary"}
+        value={selectedItem ? "" : true}
+        onClick={() => {
+          console.log("Clicked!");
+        }}
+      >
+        My Button
+      </Button>
     </>
   );
 }
