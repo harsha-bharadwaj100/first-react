@@ -3,7 +3,7 @@ import React from "react";
 interface Props {
   children: string;
   color?: "primary" | "secondary" | "danger";
-  value: String | undefined | boolean;
+  value: boolean;
   onClick: () => void;
 }
 const Button = ({

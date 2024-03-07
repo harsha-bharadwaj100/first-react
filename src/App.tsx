@@ -19,7 +19,7 @@ function App() {
       />
       <Button
         color={selectedItem ? "primary" : "secondary"}
-        value={selectedItem ? "" : true}
+        value={selectedItem ? false : true}
         onClick={() => {
           console.log("Clicked!");
         }}
